@@ -1,0 +1,314 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container,
+.main,
+.header,
+.sidebar {
+    display: grid;
+}
+
+.container {
+    height: 120vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
+
+}
+
+.header {
+    grid-row: 1/2;
+    grid-column: 2/5;
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr)
+}
+
+.searchbar {
+    margin-top: 1vh;
+    display: grid;
+    grid-template: 1fr /1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row: 1/2;
+    grid-column: 2/8;
+
+}
+
+.header input[type="search"] {
+    background-color: rgb(237, 230, 230);
+    grid-column: 2/13;
+    border-radius: 12px;
+    height: 3vh;
+}
+
+.header .icon {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    display: flex;
+}
+
+.header .icon img {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+
+
+}
+
+.texte {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.email {
+    text-align: end;
+    font-weight: bold;
+    margin-left: 0.5vw;
+    font-size: 24px;
+}
+
+.icon2 {
+    margin-top: 1vh;
+    grid-column: 10/11;
+}
+
+.icon2 img {
+    width: 6vw;
+    height: 6vh;
+    border-radius: 50%;
+}
+
+.notif {
+    margin-top: 1vh;
+    grid-column: 9/10;
+}
+
+.name {
+    margin-top: 1vh;
+    font-weight: bold;
+    letter-spacing: 0.01vw;
+    grid-column: 11/12;
+}
+
+.upload {
+    grid-column: 9/10;
+    grid-row: 2/3;
+    margin-right: 1.1vw;
+}
+
+.new {
+    grid-column: 10/11;
+    grid-row: 2/3;
+    margin-right: 1.1vw;
+}
+
+.share {
+    grid-column: 11/12;
+    grid-row: 2/3;
+    margin-right: 1.1vw;
+}
+
+.header button {
+    background-color: rgb(11, 120, 188);
+    color: white;
+    border-radius: 8px;
+    padding: 1vw 2vw;
+    border: none;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.header p.email {
+    font-size: 1.5vw;
+}
+
+.header p.texte {
+    font-size: 1.0vw;
+}
+
+
+
+
+.sidebar {
+    display: grid;
+    grid-row: 1/6;
+    grid-column: 1/2;
+    border: 1px solid green;
+    background-color: rgb(11, 120, 188);
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: auto;
+    place-items: center;
+}
+
+.sidebar>div {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.2vw;
+    grid-column: 1/3;
+
+
+}
+
+div.logo {
+
+    grid-row: 1/2;
+    font-size: 2vw;
+}
+
+.home {
+    grid-row: 2/3;
+}
+
+.profile {
+    grid-row: 3/4;
+}
+
+.messages {
+    grid-row: 4/5;
+}
+
+.history {
+    grid-row: 5/6;
+}
+
+.tasks {
+    grid-row: 6/7;
+}
+
+.communities {
+    grid-row: 7/8;
+}
+
+.support {
+    grid-row: 9/10;
+}
+
+.settings {
+    grid-row: 10/11;
+}
+
+.privacy {
+    grid-row: 11/12;
+}
+
+
+
+
+
+
+
+.main {
+    display: grid;
+    grid-row: 2/6;
+    grid-column: 2/5;
+    border: green 1px solid;
+    background-color: #cbd5e1;
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.02vw;
+    padding: 1vw;
+}
+
+.main1 {
+    display: grid;
+    gap: 1.02vw;
+
+}
+
+.main1>div:not(.rectangle1, .rectangle2) {
+    background-color: white;
+    border-left: orange solid 0.4vw;
+    border-radius: 0.2vw;
+    padding: 1vw;
+    width: 20vw;
+    height: 20vh;
+}
+
+
+
+
+.main2>.rectangle1,
+.rectangle2 {
+    background-color: white;
+    border-left: orange solid 0.4vw;
+    border-radius: 0.2vw;
+    padding: 1vw;
+    height: 32vh;
+    width: 15vw;
+}
+
+.main2 {
+    display: grid;
+    grid-row: 1fr 1fr 1fr 1fr;
+}
+
+.announcements {
+    grid-row: 1/2;
+
+}
+
+.rectangle1 {
+    grid-row: 2/3;
+
+}
+
+.trending {
+    grid-row: 3/4;
+}
+
+.rectangle2 {
+
+    grid-row: 4/5;
+}
+
+
+
+
+.case1 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.case2 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.case3 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.case4 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.case5 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+
+.case6 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+}
+
+
+
+.project {
+    grid-row: 1/2;
+    grid-column: 1/2
+}
+
+
+
+.main h1 {
+    font-size: 1vw;
+}
+
+.main p {
+    font-size: 0.7vw;
+}
